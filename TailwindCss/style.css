@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "vazir";
+    src: url("../Fonts/Vazir/Vazir.ttf");
+}
+
+@font-face {
+    font-family: "lalezar";
+    src: url("../Fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
+}
+
+@layer components {
+    .active-menu {
+        position: relative;
+        background: linear-gradient(90deg, rgba(53, 60, 80, 1) 0%, rgba(0, 212, 255, 0) 100%);
+        color: #fff;
+        border-left: 5px solid #4869ff;
+    }
+}
+
+#sidebar li:hover {
+    position: relative;
+    background: linear-gradient(90deg, rgba(53, 60, 80, 1) 0%, rgba(0, 212, 255, 0) 100%);
+    color: #fff;
+    transition: all 400ms;
+}
+
+.home-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px, auto));
+    gap: 1rem;
+}
+
+.home-box-title::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background-color: #1943da;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 1px #1943da81;
+    top: 50%;
+    right: -15px;
+}
+
+.home-box-title::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background-color: #1943da;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 1px #1943da81;
+    bottom: 50%;
+    left: -15px;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../TailwindCss/output.css">
+
+    <title>SignUp</title>
+</head>
+<body dir="rtl" class="font-vazir bg-gray-100">
+    <main class="h-[100vh] flex justify-center items-center">
+        <div class="bg-white rounded-lg w-96 p-6 mx-4">
+            <h1 class="font-semibold text-xl text-center">ثبت نام کنید</h1>
+
+            <form class="flex flex-col my-6">
+                <div class="mb-4">
+                    <label for="first-name-input" class="flex items-center gap-1 text-gray-400 font-semibold text-xs mb-2">
+                        نام
+                        <i class='bx bxs-user'></i>
+                    </label>
+                    <input type="text" placeholder="First name" dir="ltr" id="first-name-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                </div>
+
+                <div class="mb-4">
+                    <label for="last-name-input" class="flex items-center gap-1 text-gray-400 font-semibold text-xs mb-2">
+                        نام خانوادگی
+                        <i class='bx bxs-user'></i>
+                    </label>
+                    <input type="text" placeholder="Last name" dir="ltr" id="last-name-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email-input" class="flex items-center gap-1 text-gray-400 font-semibold text-xs mb-2">
+                        ایمیل
+                        <i class='bx bxs-envelope'></i>
+                    </label>
+                    <input type="text" placeholder="Unknown@gmail.com" dir="ltr" id="email-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                </div>
+
+                <div class="mb-4">
+                    <label for="password-input" class="flex items-center gap-1 text-gray-400 font-semibold text-xs mb-2">
+                        رمز عبور
+                        <i class='bx bxs-lock-alt'></i>
+                    </label>
+                    <input type="password" placeholder="Password" dir="ltr" id="password-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                </div>
+
+
+                <button class="bg-lightBlue text-white rounded-md py-2 text-lg mt-4 hover:bg-darkBlue">ثبت نام</button>
+            </form>
+
+            <p class="text-gray-400 font-semibold text-sm">ثبت نام کرده اید؟<a href="../../index.html" class="text-lightBlue hover:text-darkBlue"> وارد اکانت خود شوید</a></p>
+
+        </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

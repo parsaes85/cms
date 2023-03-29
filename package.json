@@ -1,0 +1,16 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./TailwindCss/style.css -o ./TailwindCss/output.css",
+    "watch": "npx tailwindcss -i ./TailwindCss/style.css -o ./TailwindCss/output.css --watch"
+  },
+  "keywords": [],
+  "author": "parsa",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+}
