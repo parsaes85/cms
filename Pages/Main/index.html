@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../Vendor/swiperSlider/swiper.css">
     <link rel="stylesheet" href="../../TailwindCss/output.css">
 
     <title>Home</title>
@@ -16,55 +17,55 @@
         <ul class="text-gray-400 pr-6 pt-6">
             <li class="py-4 active-menu">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-home'></i><span>داشبورد</span>
+                    <i class='fas fa-home'></i><span>داشبورد</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-user'></i><span>کاربران</span>
+                    <i class='fas fa-users'></i><span>کاربران</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-user-plus'></i><span>افزودن کاربر جدید</span>
+                    <i class='fas fa-user-plus'></i><span>افزودن کاربر جدید</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-cart-alt'></i><span>محصولات</span>
+                    <i class='fas fa-shopping-cart'></i><span>محصولات</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-cart-add'></i><span>افزودن محصولات جدید</span>
+                    <i class='fas fa-cart-plus'></i><span>افزودن محصولات جدید</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bx-line-chart'></i><span>گزارش ها</span>
+                    <i class='far fa-chart-bar'></i><span>گزارش ها</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-envelope'></i><span>ایمیل</span>
+                    <i class='fa fa-envelope'></i><span>ایمیل</span>
                 </a>
             </li>
 
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-message'></i><span>پیام ها</span>
+                    <i class='fas fa-comment-alt'></i><span>پیام ها</span>
                 </a>
             </li>
             
             <li class="py-4">
                 <a href="index.html" class="flex gap-2 items-center">
-                    <i class='bx bxs-error-circle'></i><span>گزارش ها</span>
+                    <i class='fas fa-exclamation-circle'></i><span>گزارش ها</span>
                 </a>
             </li>
         </ul>
@@ -74,13 +75,13 @@
         <header class="bg-white py-4 px-6 flex items-center justify-end gap-4 md:justify-start">
             <input type="text" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
 
-            <i class='bx bx-bell text-gray-400 text-xl'></i>
+            <i class='far fa-bell text-gray-400 text-xl'></i>
         </header>
 
-        <main class="p-6">
+        <main class="py-6 px-4">
             <h2 class="font-lalezar text-lg">خوش آمدید, <span class="text-lightBlue">پارسا اسماعیلی</span></h2>
 
-            <div class="home-boxes gap-6 my-6">
+            <div class="home-boxes gap-6 mt-6">
                 <div class="bg-white p-5 rounded-md shadow-custom">
                     <div>
                         <span class="home-box-title font-lalezar font-bold relative text-2xl text-darkBlue">درآمد</span>                        
@@ -91,7 +92,7 @@
 
                         <span class="text-green-400 font-semibold">+5.2%</span>
 
-                        <i class='bx bx-money bx-lg text-lightBlue'></i>
+                        <i class='fas fa-money-bill-alt text-4xl text-lightBlue'></i>
                     </div>
 
                     <p class="text-gray-400">درآمد در یک ماه گذشته</p>
@@ -107,7 +108,7 @@
 
                         <span class="text-green-400 font-semibold">+5.2%</span>
 
-                        <i class='bx bx bxs-cart-alt bx-lg text-lightBlue'></i>
+                        <i class='fas fa-shopping-cart text-4xl text-lightBlue'></i>
                     </div>
 
                     <p class="text-gray-400">فروش در یک ماه گذشته</p>
@@ -123,11 +124,28 @@
 
                         <span class="text-green-400 font-semibold">+5.2%</span>
 
-                        <i class='bx bx-money bx-lg text-lightBlue'></i>
+                        <i class='fas fa-money-bill-alt text-4xl text-lightBlue'></i>
                     </div>
 
                     <p class="text-gray-400">هزینه در یک ماه گذشته</p>
                 </div>
+            </div>
+
+            <div class="my-6 bg-white rounded-md shadow-custom">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper py-4">
+                      <div class="swiper-slide">
+                          <div id="sale-chart"></div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div id="revanue-chart"></div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div id="cost-chart"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
 
             <div class="bg-white rounded-md shadow-custom px-3 py-6">
@@ -173,5 +191,8 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../../Vendor/swiperSlider/swiper.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>

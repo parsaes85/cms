@@ -45,7 +45,6 @@
     top: 50%;
     right: -15px;
 }
-
 .home-box-title::after {
     content: "";
     position: absolute;
@@ -58,3 +57,17 @@
     left: -15px;
 }
 
+.swiper-pagination-bullet {
+    width: 13px;
+    border-radius:  50%;
+    height: 13px;
+    background: transparent;
+    border: 2px solid #1943da;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    width: 35px;
+    height: 13px;
+    border-radius: 10px;
+    background-color: #1943da;
+}
