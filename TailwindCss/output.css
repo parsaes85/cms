@@ -543,6 +543,18 @@ video {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.right-96 {
+  right: 24rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -895,18 +907,6 @@ video {
   font-family: "lalezar";
 
   src: url("../Fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
-}
-
-body {
-  transition: all 2s !important;
-}
-
-#sidebar {
-  transition: all 2s !important;
-}
-
-#sidebar ul {
-  transition: all 2s !important;
 }
 
 #sidebar li:hover {
