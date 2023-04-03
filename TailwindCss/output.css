@@ -543,6 +543,10 @@ video {
   left: 0px;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -576,6 +580,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -596,10 +604,6 @@ video {
   height: 100vh;
 }
 
-.w-1\/6 {
-  width: 16.666667%;
-}
-
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -614,14 +618,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[500px\] {
-  width: 500px;
 }
 
 .flex-col {
@@ -664,8 +660,8 @@ video {
   overflow-x: auto;
 }
 
-.overflow-x-scroll {
-  overflow-x: scroll;
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded-lg {
@@ -777,9 +773,8 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pr-6 {
@@ -880,6 +875,16 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 @font-face {
   font-family: "vazir";
 
@@ -890,6 +895,18 @@ video {
   font-family: "lalezar";
 
   src: url("../Fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
+}
+
+body {
+  transition: all 2s !important;
+}
+
+#sidebar {
+  transition: all 2s !important;
+}
+
+#sidebar ul {
+  transition: all 2s !important;
 }
 
 #sidebar li:hover {
@@ -945,6 +962,52 @@ video {
   background-color: #1943da;
 }
 
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom{
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0px;
+  left: 0px;
+  background: #1943da;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle{
+  transform: translateY(7px);
+}
+
+.hamburger-bottom{
+  transform: translateY(14px);
+}
+
+.open{
+  transform: rotate(90deg)
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background: #ffffff;
+}
+
+.open .hamburger-middle {
+  display: none;
+  background: #ffffff;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background: #ffffff;
+}
+
 .placeholder\:text-sm::-moz-placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -990,6 +1053,14 @@ video {
     right: 0px;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-1\/6 {
+    width: 16.666667%;
+  }
+
   .md\:w-5\/6 {
     width: 83.333333%;
   }
@@ -1000,5 +1071,13 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .md\:pt-6 {
+    padding-top: 1.5rem;
   }
 }

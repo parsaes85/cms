@@ -11,10 +11,15 @@
 
     <title>Home</title>
 </head>
-<body class="font-vazir bg-gray-100">
-    <div id="sidebar" class="w-1/6 h-[100vh] bg-darkBlue fixed -right-96 md:right-0">
+<body class="font-vazir bg-gray-100 transition-all">
+    <div id="sidebar" class="h-[100vh] bg-darkBlue z-40 fixed -right-96 transition-all duration-300 md:w-1/6 md:right-0 overflow-y-scroll md:overflow-y-auto">
+        <div class="hamburger open sidebar-close-btn mr-6 mt-4 md:hidden">
+            <div class="hamburger-top"></div>
+            <div class="hamburger-middle"></div>
+            <div class="hamburger-bottom"></div>
+        </div>
 
-        <ul class="text-gray-400 pr-6 pt-6">
+        <ul class="text-gray-400 pr-6 pt-6 md:pt-6 transition-all">
             <li class="py-4 active-menu">
                 <a href="index.html" class="flex gap-2 items-center">
                     <i class='fas fa-home'></i><span>داشبورد</span>
@@ -39,7 +44,7 @@
                 </a>
             </li>
 
-            <li class="py-4">
+            <li class="py-4 pl-2">
                 <a href="index.html" class="flex gap-2 items-center">
                     <i class='fas fa-cart-plus'></i><span>افزودن محصولات جدید</span>
                 </a>
@@ -72,10 +77,18 @@
     </div>
 
     <div id="home" class="w-full md:w-5/6 h-[100vh] absolute left-0">
-        <header class="bg-white py-4 px-6 flex items-center justify-end gap-4 md:justify-start">
-            <input type="text" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
+        <header class="bg-white py-4 px-6 flex justify-between items-center">
+            <div class="hamburger md:hidden sidebar-open-btn">
+                <div class="hamburger-top"></div>
+                <div class="hamburger-middle"></div>
+                <div class="hamburger-bottom"></div>
+            </div>
 
-            <i class='far fa-bell text-gray-400 text-xl'></i>
+            <div class="flex items-center justify-end gap-4 md:justify-start">
+                <input type="text" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
+
+                <i class='far fa-bell text-gray-400 text-xl'></i>
+            </div>
         </header>
 
         <main class="py-6 px-4">
@@ -194,5 +207,6 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../../Vendor/swiperSlider/swiper.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
