@@ -12,5 +12,5 @@ sidebarCloseBtn.addEventListener('click', () => {
 
 Toast.fire({
     icon: 'success',
-    title: 'کاربر با موفقیت حذف شد',
+    title: 'کاربر با موفقیت اضافه شد',
 })
