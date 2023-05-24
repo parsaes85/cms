@@ -84,7 +84,7 @@
             </div>
 
             <div class="flex items-center justify-end gap-4 md:justify-start">
-                <input type="text" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
+                <input type="search" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
 
                 <i class='far fa-bell text-gray-400 text-xl'></i>
             </div>
@@ -97,23 +97,23 @@
                 <form class="space-y-2 sm:grid sm:grid-cols-2 sm:gap-x-7 sm:gap-y-2 sm:space-y-0">
                     <div>
                         <label class="font-lalezar text-lg">نام محصول</label>
-                        <input type="text" placeholder="لطفا نام محصول را وارد کنید..." class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
-                        <span class="error-message text-danger"></span>
+                        <input type="text" placeholder="لطفا نام محصول را وارد کنید..." id="product-title-input" class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
+                        <span class="text-red-400 text-sm hidden">لطفا نام محصول رو وارد کنید</span>
                     </div>
 
                 
                     <div>
                         <label class="font-lalezar text-lg">قیمت محصول</label>
                         <input type="text"
-                            placeholder="لطفا قیمت محصول را وارد کنید..." class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
-                        <span class="error-message text-danger"></span>
+                            placeholder="لطفا قیمت محصول را وارد کنید...(تومان)" id="product-price-input" class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
+                        <span class="text-red-400 text-sm hidden">لطفا قیمت محصول رو وارد کنید</span>
                     </div>
 
                 
                     <div>
                         <label class="font-lalezar text-lg">تعداد محصول</label>
-                        <input type="text" placeholder="لطفا تعداد محصول را وارد کنید..." class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
-                        <span class="error-message text-danger"></span>
+                        <input type="text" placeholder="لطفا تعداد محصول را وارد کنید..." id="product-count-input" class="border border-gray-400 block w-full rounded px-3 py-1 placeholder:text-[13px] placeholder:text-gray-500">
+                        <span class="text-red-400 text-sm hidden">لطفا تعداد محصول رو وارد کنید</span>
                     </div>
 
                 
@@ -121,7 +121,7 @@
                         <label class="font-lalezar text-lg">عکس محصول</label>
                         <input type="file"
                             class="block">
-                        <span class="error-message text-danger"></span>
+                        <span class="text-red-400 text-sm hidden"></span>
                     </div>
 
                     <div class="col-span-2 flex justify-between items-end">
@@ -130,7 +130,7 @@
                             <div class="flex gap-4">
                                 <label>
                                     <span>موجود</span>
-                                    <input type="radio" name="role" checked>
+                                    <input type="radio" name="role" id="available-radio" checked>
                                 </label>
 
                                 <label>
@@ -141,7 +141,7 @@
                         </div>
                         
                         <div>
-                            <input type="submit" value="افزودن" class="bg-blue-600 py-2 px-5 rounded-md text-white text-sm">
+                            <input type="submit" value="افزودن" id="submit-btn" class="bg-blue-600 py-2 px-5 rounded-md text-white text-sm">
                         </div>
                     </div>
                 </form>

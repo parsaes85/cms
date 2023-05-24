@@ -11,6 +11,17 @@
     <title>SignIn</title>
 </head>
 <body dir="rtl" class="font-vazir bg-gray-100">
+    <div class="absolute top-5 right-5">
+        <div id="admins-info-btn" class="flex items-center gap-1 cursor-pointer">
+            <i class="fa-sharp fa-regular fa-circle-question text-gray-400"></i>
+            <h1 class="text-gray-400 font-semibold">مشخصات ادمین ها</h1>
+        </div>
+
+        <div id="admins-container" class="bg-white rounded-md mt-2 hidden" dir="ltr">
+
+        </div>
+    </div>
+
     <main class="h-[100vh] flex justify-center items-center">
         <div class="bg-white rounded-lg w-96 py-10 px-8 mx-4">
             <h1 class="font-semibold text-xl text-center">وارد اکانت ادمین شوید</h1>
@@ -22,6 +33,7 @@
                         <i class="fa-solid fa-envelope"></i>
                     </label>
                     <input type="text" placeholder="Unknown@gmail.com" dir="ltr" id="email-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                    <span class="text-red-400 text-sm hidden">لطفا ایمیل ادمین رو وارد کنید</span>
                 </div>
 
                 <div class="mb-4">
@@ -30,10 +42,11 @@
                         <i class="fa-solid fa-lock"></i>
                     </label>
                     <input type="password" placeholder="Password" dir="ltr" id="password-input" class="border w-full p-2 rounded-md focus:outline-gray-500 placeholder:text-sm">
+                    <span class="text-red-400 text-sm hidden">لطفا رمز عبور ادمین رو وارد کنید</span>
                 </div>
 
 
-                <button class="bg-lightBlue text-white rounded-md py-2 text-lg mt-4 hover:bg-darkBlue">ورود</button>
+                <button id="signIn-btn" class="bg-lightBlue text-white rounded-md py-2 text-lg mt-4 hover:bg-darkBlue">ورود</button>
             </form>
 
             <p class="text-gray-400 font-semibold text-sm">اکانت ندارید؟ <a href="Pages/SignUp/index.html" class="text-lightBlue hover:text-darkBlue"> ثبت نام کنید</a></p>
@@ -41,5 +54,8 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Pages/SignIn/js/custom.js"></script>
+    <script src="./Pages/SignIn/js/script.js"></script>
 </body>
 </html>

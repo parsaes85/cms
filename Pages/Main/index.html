@@ -92,7 +92,7 @@
         </header>
 
         <main class="py-6 px-4">
-            <h2 class="font-lalezar text-lg">خوش آمدید, <span class="text-lightBlue">پارسا اسماعیلی</span></h2>
+            <h2 class="font-lalezar text-lg">خوش آمدید, <span id="admin-info" class="text-lightBlue"></span></h2>
 
             <div class="home-boxes gap-6 mt-6">
                 <div class="bg-white p-5 rounded-md shadow-custom">
@@ -162,7 +162,7 @@
             </div>
 
             <div class="bg-white rounded-md shadow-custom px-3 py-6">
-                <h2 class="font-lalezar text-lg">افراد اخیرا <span class="text-lightBlue">ثبت نام</span> شده</h2>
+                <h2 class="font-lalezar text-lg">کاربران اخیرا <span class="text-lightBlue">ثبت نام</span> شده</h2>
 
                 <div class="overflow-x-auto">
                     <table class="w-[500px] mx-auto md:w-full mt-4 overflow-x-auto">
@@ -173,18 +173,10 @@
                             <th class="text-center text-gray-500 font-lalezar text-lg py-2">نام خانوادگی</th>
                             <th class="text-center text-gray-500 font-lalezar text-lg py-2">ایمیل</th>
                             <th class="text-center text-gray-500 font-lalezar text-lg py-2">رمز عبور</th>
-                            <th class="text-center text-gray-500 font-lalezar text-lg py-2">نقش</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr class="align-middle">
-                            <td class="text-center py-2">1</td>
-                            <td class="text-center py-2">amin</td>
-                            <td class="text-center py-2">saeedi</td>
-                            <td class="text-center py-2">gmail</td>
-                            <td class="text-center py-2">amin0101</td>
-                            <td class="text-center py-2">مدیر</td>
-                          </tr>
+                        <tbody id="table-body">
+
                         </tbody>
                       </table>
                 </div>
