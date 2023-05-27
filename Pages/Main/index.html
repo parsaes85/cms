@@ -84,10 +84,17 @@
                 <div class="hamburger-bottom"></div>
             </div>
 
-            <div class="flex items-center justify-end gap-4 md:justify-start">
+            <div class="hidden md:flex items-center justify-end gap-4 md:justify-start">
                 <input type="text" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
 
                 <i class='far fa-bell text-gray-400 text-xl'></i>
+            </div>
+
+            <div class="flex items-center gap-2 mr-auto">
+                <div class="font-lalezar">
+                    <h1 id="admin-profile-name"></h1>
+                    <h3 class="text-gray-500">مدیر</h3>
+                </div>
             </div>
         </header>
 
@@ -188,5 +195,6 @@
     <script src="../../Vendor/swiperSlider/swiper.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/script.js"></script>
+    <script src="../../js_modules/getAdminInfo.js"></script>
 </body>
 </html>

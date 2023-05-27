@@ -83,10 +83,17 @@
                 <div class="hamburger-bottom"></div>
             </div>
 
-            <div class="flex items-center justify-end gap-4 md:justify-start">
+            <div class="hidden md:flex items-center justify-end gap-4 md:justify-start">
                 <input type="search" placeholder="جستجو..." class="bg-slate-100 rounded-md px-4 py-1.5 w-2/3 sm:w-64 placeholder:text-gray-300">
 
                 <i class='far fa-bell text-gray-400 text-xl'></i>
+            </div>
+
+            <div class="flex items-center gap-2 mr-auto">
+                <div class="font-lalezar">
+                    <h1 id="admin-profile-name"></h1>
+                    <h3 class="text-gray-500">مدیر</h3>
+                </div>
             </div>
         </header>
 
@@ -119,12 +126,13 @@
                 
                     <div>
                         <label class="font-lalezar text-lg">عکس محصول</label>
-                        <input type="file"
-                            class="block">
-                        <span class="text-red-400 text-sm hidden"></span>
+                        <label class="py-1 px-3 bg-gray-100 border border-gray-400 rounded block w-fit cursor-pointer">
+                            <input type="file" class="hidden">
+                            select image
+                        </label>
                     </div>
 
-                    <div class="col-span-2 flex justify-between items-end">
+                    <div class="col-span-2 sm:flex justify-between items-end">
                         <div>
                             <label class="font-lalezar text-lg">موجودی</label>
                             <div class="flex gap-4">
@@ -140,7 +148,7 @@
                             </div>
                         </div>
                         
-                        <div>
+                        <div class="mt-3 sm:mt-0">
                             <input type="submit" value="افزودن" id="submit-btn" class="bg-blue-600 py-2 px-5 rounded-md text-white text-sm">
                         </div>
                     </div>
@@ -150,7 +158,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/custom.js"></script>
+    <script src="../../Vendor/sweetAlert/sweetalert.js"></script>
     <script src="js/script.js"></script>
+    <script src="../../js_modules/getAdminInfo.js"></script>
 </body>
 </html>

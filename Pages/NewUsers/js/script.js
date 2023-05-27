@@ -8,11 +8,15 @@ const userLastnameInput = $.getElementById('user-lastname-input')
 const userEmailInput = $.getElementById('user-email-input')
 const userPasswordInput = $.getElementById('user-password-input')
 const userRadio = $.getElementById('user-radio')
+const fileInputContainer = $.getElementById('file-input-container')
+const fileInput = $.querySelector('#file-input-container input')
 const allInputs = $.querySelectorAll('input[type=text], input[type=password]')
+const form = $.querySelector('form')
 
 const mainUrl = 'https://cms-backend.iran.liara.run/api'
 
 let numberOfValidateInputs = 0
+let imgSrc = null
 
 const addNewUser = async () => {
     const newUserObj = {
@@ -42,7 +46,8 @@ const addNewAdmin = async () => {
         lastname: userLastnameInput.value,
         email: userEmailInput.value,
         password: userPasswordInput.value,
-        token: crypto.randomUUID()
+        token: crypto.randomUUID(),
+        img: imgSrc
     }
 
     let res = await fetch(`${mainUrl}/admins`, {
@@ -96,6 +101,16 @@ submitBtn.addEventListener('click', e => {
     }
 
     numberOfValidateInputs = 0
+})
+form.addEventListener('change', () => {
+    if(!userRadio.checked) {
+        fileInputContainer.classList.remove('hidden')
+    } else if (userRadio.checked) {
+        fileInputContainer.classList.add('hidden')
+    }
+})
+fileInput.addEventListener('change', (e) => {
+    imgSrc = URL.createObjectURL(e.target.files[0])
 })
 sidebarOpenBtn.addEventListener('click', () => {
     sidebar.classList.replace('-right-96', 'right-0')

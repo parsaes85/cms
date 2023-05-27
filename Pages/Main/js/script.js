@@ -2,24 +2,10 @@ let $ = document
 const sidebarCloseBtn = $.querySelector('.sidebar-close-btn')
 const sidebarOpenBtn = $.querySelector('.sidebar-open-btn')
 const sidebar = $.getElementById('sidebar')
-const adminInfo = $.getElementById('admin-info')
 const tableBody = $.getElementById('table-body')
 
+
 const mainUrl = 'https://cms-backend.iran.liara.run/api'
-
-const getMainUser = async () => {
-    let adminToken = localStorage.getItem('user-token')
-
-    let res = await fetch(`${mainUrl}/admins/main`, {
-        method: "GET",
-        headers: {
-            authorization: adminToken 
-        }
-    })
-    let data = await res.json()
-
-    adminInfo.innerHTML = `${data[0].firstname} ${data[0].lastname}`
-}
 
 const getAllUsers = async () => {
     let res = await fetch(`${mainUrl}/users`)
@@ -56,6 +42,5 @@ sidebarCloseBtn.addEventListener('click', () => {
     sidebar.classList.replace('right-0', '-right-96')
 })
 window.addEventListener('load', () => {
-    getMainUser()
     getAllUsers()
 })
